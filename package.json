@@ -1,0 +1,58 @@
+{
+  "name": "crm-graph-api",
+  "version": "0.0.1",
+  "description": "NodeJs Customer relationship management backend with graphql api.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "npm test",
+    "docs": "jsdoc src/**/*.js -d docs",
+    "start": "nodemon --exec babel-node src/server.js --inspect ./bin/www",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/server.js",
+    "eslint-fix": "eslint --fix src",
+    "prettify": "prettier --write src/**/*.js src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganesh-4212/crm-graph-api.git"
+  },
+  "author": "Ganesh Poojary <ganesh4212@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ganesh-4212/crm-graph-api/issues"
+  },
+  "homepage": "https://github.com/ganesh-4212/crm-graph-api#readme",
+  "keywords": [
+    "nodejs",
+    "mongoose",
+    "mongodb",
+    "graphql",
+    "apollo-server"
+  ],
+  "dependencies": {
+    "apollo-server": "^2.6.1",
+    "dotenv": "^8.0.0",
+    "graphql": "^14.2.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.22"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.4.0",
+    "jsdoc": "^3.6.2",
+    "nodemon": "^1.18.11",
+    "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettify && npm run docs && git add -u"
+    }
+  }
+}
