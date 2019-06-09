@@ -1,8 +1,11 @@
 import { merge } from 'lodash';
 import { makeExecutableSchema, gql } from 'apollo-server';
+import GraphQLJSON, { GraphQLJSONObject } from 'graphql-type-json';
 import { typeDefs as Customer, resolvers as customerResolvers } from './customer';
 
-const Query = gql`
+const rootTypeDefs = gql`
+  scalar JSON
+  scalar JSONObject
   type Query {
     _empty: String
   }
@@ -12,8 +15,8 @@ const Query = gql`
   }
 `;
 
-const typeDefs = [Query, Customer];
-const resolvers = merge({}, customerResolvers);
+const typeDefs = [rootTypeDefs, Customer];
+const resolvers = merge({ JSON: GraphQLJSON, JSONObject: GraphQLJSONObject }, customerResolvers);
 
 export default makeExecutableSchema({
   typeDefs,

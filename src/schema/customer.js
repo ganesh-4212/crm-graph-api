@@ -12,9 +12,10 @@ const typeDefs = gql`
     profilePic: String
   }
   input CustomerInput {
+    id: ID
     name: String
     email: String
-    phone: String
+    phone: String!
     address: String
     dateOfBirth: String
     profilePic: String
@@ -26,7 +27,6 @@ const typeDefs = gql`
 
   extend type Mutation {
     customer(customer: CustomerInput!): Customer
-    updateCustomer(id: ID!, customer: CustomerInput): Customer
   }
 `;
 
@@ -36,8 +36,12 @@ const resolvers = {
     customer: (_, { id }) => CustomerService.getById(id)
   },
   Mutation: {
-    customer: (_, { customer }) => CustomerService.createCustomer(customer),
-    updateCustomer: (_, { id, customer }) => CustomerService.updateCustomer(id, customer)
+    customer(_, { customer }) {
+      if (customer && customer.id && customer.id.length > 0) {
+        return CustomerService.updateCustomer(customer.id, customer);
+      }
+      return CustomerService.createCustomer(customer);
+    }
   }
 };
 

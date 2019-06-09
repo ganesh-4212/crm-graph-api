@@ -33,6 +33,7 @@
     "apollo-server": "^2.6.1",
     "dotenv": "^8.0.0",
     "graphql": "^14.2.1",
+    "graphql-type-json": "^0.3.0",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.22"
   },
