@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs", 
+    "lib": ["es2016", "esnext.asynciterable"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true
+  },
+  "exclude": [ "node_modules" ,".vscode","docs"],
+  "include": [ "src/**/*.ts" ]
+}
