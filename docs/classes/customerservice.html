@@ -85,6 +85,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="customerservice.html#findbyids" class="tsd-kind-icon">find<wbr>ByIds</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="customerservice.html#getall" class="tsd-kind-icon">get<wbr>All</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="customerservice.html#getbyid" class="tsd-kind-icon">get<wbr>ById</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="customerservice.html#saveorupdatecustomer" class="tsd-kind-icon">save<wbr>OrUpdate<wbr>Customer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="customerservice.html#updatecustomer" class="tsd-kind-icon">update<wbr>Customer</a></li>
 							</ul>
 						</section>
@@ -103,7 +104,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/dad05c2/src/service/customer.service.ts#L13">service/customer.service.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/44c27bb/src/service/customer.service.ts#L14">service/customer.service.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -126,7 +127,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/dad05c2/src/service/customer.service.ts#L17">service/customer.service.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/44c27bb/src/service/customer.service.ts#L26">service/customer.service.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -149,7 +150,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/dad05c2/src/service/customer.service.ts#L10">service/customer.service.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/44c27bb/src/service/customer.service.ts#L11">service/customer.service.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><a href="customer.html" class="tsd-signature-type">Customer</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -166,13 +167,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/dad05c2/src/service/customer.service.ts#L7">service/customer.service.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/44c27bb/src/service/customer.service.ts#L8">service/customer.service.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="customer.html" class="tsd-signature-type">Customer</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="saveorupdatecustomer" class="tsd-anchor"></a>
+					<h3>save<wbr>OrUpdate<wbr>Customer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">save<wbr>OrUpdate<wbr>Customer<span class="tsd-signature-symbol">(</span>customerDoc<span class="tsd-signature-symbol">: </span><a href="customerinput.html" class="tsd-signature-type">CustomerInput</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="customer.html" class="tsd-signature-type">Customer</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/44c27bb/src/service/customer.service.ts#L18">service/customer.service.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>customerDoc: <a href="customerinput.html" class="tsd-signature-type">CustomerInput</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="customer.html" class="tsd-signature-type">Customer</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -189,7 +213,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/dad05c2/src/service/customer.service.ts#L25">service/customer.service.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/ganesh-4212/crm-graph-api/blob/44c27bb/src/service/customer.service.ts#L34">service/customer.service.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -242,6 +266,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="customerservice.html#getbyid" class="tsd-kind-icon">get<wbr>ById</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="customerservice.html#saveorupdatecustomer" class="tsd-kind-icon">save<wbr>OrUpdate<wbr>Customer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="customerservice.html#updatecustomer" class="tsd-kind-icon">update<wbr>Customer</a>
