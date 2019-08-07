@@ -3,6 +3,9 @@ import { Field, InputType } from 'type-graphql'
 
 @InputType()
 export class CustomerInput implements Partial<Customer> {
+  @Field({nullable: true })
+  id?: string
+
   @Field()
   name: string
 

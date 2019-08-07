@@ -4,8 +4,8 @@ import { ObjectType, Field } from 'type-graphql'
 
 @ObjectType()
 export class Customer extends Typegoose {
-  @Field(() => Types.ObjectId, { name: 'id', nullable: true })
-  _id?: Types.ObjectId
+  @Field({nullable: true })
+  id?: string
 
   @Field()
   @prop({ required: true })

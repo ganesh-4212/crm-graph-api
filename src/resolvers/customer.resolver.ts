@@ -18,6 +18,6 @@ export class CustomerResolver {
 
   @Mutation(returns => Customer)
   async createCustomer(@Arg('customer') customer: CustomerInput) {
-    return this.customerService.createCustomer(customer)
+    return this.customerService.saveOrUpdateCustomer(customer)
   }
 }

@@ -1,3 +1,4 @@
+import { CustomerInput } from './../schema/customer.input';
 import { CustomerModel } from './../models/customer.model'
 
 import { Service } from 'typedi'
@@ -12,6 +13,14 @@ export class CustomerService {
   }
   createCustomer(customerDoc) {
     return CustomerModel.create(customerDoc)
+  }
+
+  saveOrUpdateCustomer(customerDoc:CustomerInput){
+    if(customerDoc.id){
+      return this.updateCustomer(customerDoc.id,customerDoc)
+    }else{
+      return this.createCustomer(customerDoc)
+    }
   }
 
   findByIds(ids: any[]) {
