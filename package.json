@@ -2,13 +2,14 @@
   "name": "crm-graph-api",
   "version": "0.0.1",
   "description": "NodeJs Customer relationship management backend with graphql api.",
-  "main": "src/server.js",
+  "main": "src/main.ts",
   "scripts": {
+    "docker-debug": "docker-compose up",
     "test": "npm test",
     "docs": "typedoc src/",
-    "start": "node --inspect=5858 -r ts-node/register ./src/main.ts",
+    "debug": "node --inspect=9222 -r ts-node/register ./src/main.ts",
     "start:watch": "nodemon",
-    "serve": "node dist/server.js",
+    "start": "node -r ts-node/register ./src/main.ts",
     "prettify": "prettier --write src/**/*.ts src/*.ts"
   },
   "repository": {

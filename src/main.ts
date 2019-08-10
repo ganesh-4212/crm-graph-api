@@ -6,6 +6,7 @@ import { Container } from 'typedi'
 import * as mongoose from 'mongoose'
 import { ObjectIdScalar } from './custom-scalars/objectId.scalar'
 import { config } from './config'
+const port = process.env.PORT || 8080;
 async function bootstrap() {
   if (mongoose.connection.readyState === 0) {
     mongoose.connect(config.dbURL, {
@@ -25,7 +26,7 @@ async function bootstrap() {
   })
 
   // Start the server
-  const { url } = await server.listen()
+  const { url } = await server.listen({port})
   console.log(`Server is running, GraphQL Playground available at ${url}`)
 }
 
