@@ -3,7 +3,7 @@ import { CustomerResolver } from './resolvers/customer.resolver'
 import { ApolloServer } from 'apollo-server'
 import { buildSchema } from 'type-graphql'
 import { Container } from 'typedi'
-import * as mongoose from 'mongoose'
+import mongoose from 'mongoose'
 import { ObjectIdScalar } from './custom-scalars/objectId.scalar'
 import { config } from './config'
 const port = process.env.PORT || 8080;
