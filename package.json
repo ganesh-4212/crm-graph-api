@@ -38,7 +38,7 @@
     "dotenv": "^8.0.0",
     "graphql": "^14.4.2",
     "graphql-type-json": "^0.3.0",
-    "mongoose": "^5.6.3",
+    "mongoose": "^5.7.5",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.4",
     "typedi": "^0.8.0",
