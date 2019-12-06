@@ -17,7 +17,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@nestjs/common": "^6.7.2",
@@ -30,7 +31,6 @@
     "graphql": "^14.5.8",
     "graphql-tools": "^4.0.6",
     "mongoose": "^5.7.13",
-    "nestjs-easyconfig": "^1.6.1",
     "nestjs-typegoose": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
