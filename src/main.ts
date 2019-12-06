@@ -6,7 +6,7 @@ import { Container } from 'typedi'
 import mongoose from 'mongoose'
 import { ObjectIdScalar } from './custom-scalars/objectId.scalar'
 import { config } from './config'
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080; 
 async function bootstrap() {
   if (mongoose.connection.readyState === 0) {
     mongoose.connect(config.dbURL, {
